@@ -1,0 +1,44 @@
+{
+  "name": "@vue-toys/resize-observer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "vue",
+    "vue-component",
+    "vue-resize-observer",
+    "resize-observer"
+  ],
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production rollup -c",
+    "prettier": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\""
+  },
+  "dependencies": {
+    "resize-observer-polyfill": "^1.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vue-toys/resize-observer.git"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^7.0.0-beta.3",
+    "prettier": "^2.1.2",
+    "rollup": "^2.28.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "typescript": "^4.0.3",
+    "vue": "^3.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  }
+}
