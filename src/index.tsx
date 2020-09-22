@@ -32,18 +32,19 @@ const initResizeObserver = (callback: ResizeHandler): ResizeObserver => {
     const fixedWidth = Math.floor(width);
     const fixedHeight = Math.floor(height);
 
-    // observer‘s callback is always triggered the first time
     const { width: lastWidth, height: lastHeight, offsetWidth: lastOffsetWidth, offsetHeight: lastOffsetHeight } = lastSize
+
+    // observer‘s callback is always triggered the first time
     if (lastWidth === 0 && lastHeight === 0 && lastOffsetWidth === 0 && lastOffsetHeight === 0) {
       lastSize = { width: fixedWidth, height: fixedHeight, offsetWidth, offsetHeight };
       return;
     }
 
     if (
-      lastSize.width !== fixedWidth ||
-      lastSize.height !== fixedHeight ||
-      lastSize.offsetWidth !== offsetWidth ||
-      lastSize.offsetHeight !== offsetHeight
+      lastWidth !== fixedWidth ||
+      lastHeight !== fixedHeight ||
+      lastOffsetWidth !== offsetWidth ||
+      lastOffsetHeight !== offsetHeight
     ) {
       lastSize = { width: fixedWidth, height: fixedHeight, offsetWidth, offsetHeight };
 
