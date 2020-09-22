@@ -24,12 +24,6 @@ export default {
   plugins: [
     commonjs(),
     tsPlugin,
-    terser({
-      module: /^esm/.test('cjs'),
-      compress: {
-        ecma: 2015,
-        pure_getters: true
-      }
-    })
+    terser()
   ]
 }
