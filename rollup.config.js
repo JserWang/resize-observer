@@ -1,6 +1,8 @@
 import path from 'path'
-import commonjs from 'rollup-plugin-commonjs';
+import commonjs from 'rollup-plugin-commonjs'
 import ts from 'rollup-plugin-typescript2'
+import buble from 'rollup-plugin-buble'
+import resolve from 'rollup-plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
 
 const tsPlugin = ts({
@@ -18,12 +20,17 @@ export default {
   input: 'src/index.tsx',
   external: ['vue'],
   output: {
+    name: 'VueResizeObserver',
     file: path.resolve(__dirname, './dist/index.js'),
-    format: 'cjs'
+    format: 'umd',
   },
   plugins: [
-    commonjs(),
     tsPlugin,
+    resolve(),
+    commonjs(),
+    buble({
+      objectAssign: 'Object.assign'
+    }),
     terser()
   ]
 }
