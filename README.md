@@ -3,7 +3,8 @@
 Resize observer directive for vue 3.0
 
 ## Environment Support
-Modern browsers 
+
+Modern browsers
 
 ## Installation
 

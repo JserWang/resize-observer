@@ -1,9 +1,9 @@
-import path from 'path'
-import commonjs from 'rollup-plugin-commonjs'
-import ts from 'rollup-plugin-typescript2'
-import buble from 'rollup-plugin-buble'
-import resolve from 'rollup-plugin-node-resolve'
-import { terser } from 'rollup-plugin-terser'
+import path from 'path';
+import commonjs from 'rollup-plugin-commonjs';
+import ts from 'rollup-plugin-typescript2';
+import buble from 'rollup-plugin-buble';
+import resolve from 'rollup-plugin-node-resolve';
+import { terser } from 'rollup-plugin-terser';
 
 const tsPlugin = ts({
   check: process.env.NODE_ENV === 'production',
@@ -11,10 +11,10 @@ const tsPlugin = ts({
   tsconfigOverride: {
     compilerOptions: {
       declaration: true,
-      declarationMap: false
-    }
-  }
-})
+      declarationMap: false,
+    },
+  },
+});
 
 export default {
   input: 'src/index.tsx',
@@ -29,8 +29,8 @@ export default {
     resolve(),
     commonjs(),
     buble({
-      objectAssign: 'Object.assign'
+      objectAssign: 'Object.assign',
     }),
-    terser()
-  ]
-}
+    terser(),
+  ],
+};

@@ -1,5 +1,5 @@
 import install from './install';
-import directive from './directive'
+import directive from './directive';
 
 export interface Size {
   width: number;
@@ -10,5 +10,5 @@ export interface Size {
 
 export default {
   install,
-  directive
-}
+  directive,
+};

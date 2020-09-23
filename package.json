@@ -11,7 +11,6 @@
     "resize-observer"
   ],
   "files": [
-    "index.js",
     "dist"
   ],
   "scripts": {

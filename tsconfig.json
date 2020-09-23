@@ -8,6 +8,6 @@
     "moduleResolution": "node",
     "jsx": "preserve",
     "allowJs": false,
-    "strict": true,
+    "strict": true
   }
 }

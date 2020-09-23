@@ -1,6 +1,6 @@
 import ResizeObserver from 'resize-observer-polyfill';
-import { Directive } from '@vue/runtime-core'
-import { Size } from './index'
+import { Directive } from '@vue/runtime-core';
+import { Size } from './index';
 
 declare type ResizeHandler = (size: Size) => void;
 
@@ -26,7 +26,12 @@ export const initResizeObserver = (callback: ResizeHandler): ResizeObserver => {
     const fixedWidth = Math.floor(width);
     const fixedHeight = Math.floor(height);
 
-    const { width: lastWidth, height: lastHeight, offsetWidth: lastOffsetWidth, offsetHeight: lastOffsetHeight } = lastSize
+    const {
+      width: lastWidth,
+      height: lastHeight,
+      offsetWidth: lastOffsetWidth,
+      offsetHeight: lastOffsetHeight,
+    } = lastSize;
 
     // observer‘s callback is always triggered the first time
     if (lastWidth === 0 && lastHeight === 0 && lastOffsetWidth === 0 && lastOffsetHeight === 0) {
@@ -65,6 +70,6 @@ const directive: Directive = {
       el._resizeObserver.disconnect();
     }
   },
-}
+};
 
-export default directive
+export default directive;
