@@ -18,7 +18,7 @@ const tsPlugin = ts({
 
 export default {
   input: 'src/index.tsx',
-  external: ['vue'],
+  external: ['@vue/runtime-core'],
   output: {
     name: 'VueResizeObserver',
     file: path.resolve(__dirname, './dist/index.js'),
