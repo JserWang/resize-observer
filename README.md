@@ -23,15 +23,15 @@ npm install @vue-toys/resize-observer
 in `main.js` or `main.ts`
 
 ```javascript
-import { createApp } from 'vue';
-import ResizeObserver from '@vue-toys/resize-observer';
-import App from './App.vue';
+import { createApp } from 'vue'
+import ResizeObserver from '@vue-toys/resize-observer'
+import App from './App.vue'
 
-const app = createApp(App);
+const app = createApp(App)
 
-app.use(Resize);
+app.use(Resize)
 
-app.mount('#app');
+app.mount('#app')
 ```
 
 in `.vue` file template
@@ -57,19 +57,19 @@ export default {
 in `.tsx` file
 
 ```javascript
-import { defineComponent, h, resolveDirective, withDirectives } from 'vue';
-import { Size } from '@vue-toys/resize-observer';
+import { defineComponent, h, resolveDirective, withDirectives } from 'vue'
+import { Size } from '@vue-toys/resize-observer'
 
 const handleResize = (e: Size) => {
-  console.log(e);
-};
+  console.log(e)
+}
 
 export default defineComponent({
   render() {
-    const vDemo = resolveDirective('resize');
-    return withDirectives(h('div'), [[vDemo, handleResize]]);
+    const vDemo = resolveDirective('resize')
+    return withDirectives(h('div'), [[vDemo, handleResize]])
   },
-});
+})
 ```
 
 ### without `app.use`
@@ -102,19 +102,19 @@ export default {
 in `.tsx` file
 
 ```javascript
-import { defineComponent, h, resolveDirective, withDirectives } from 'vue';
-import ResizeObserver, { Size } from '@vue-toys/resize-observer';
+import { defineComponent, h, resolveDirective, withDirectives } from 'vue'
+import ResizeObserver, { Size } from '@vue-toys/resize-observer'
 
 const handleResize = (e: Size) => {
-  console.log(e);
-};
+  console.log(e)
+}
 
 export default defineComponent({
   render() {
-    const vDemo = ResizeObserver.directive;
-    return withDirectives(h('div'), [[vDemo, handleResize]]);
+    const vDemo = ResizeObserver.directive
+    return withDirectives(h('div'), [[vDemo, handleResize]])
   },
-});
+})
 ```
 
 # TODO
